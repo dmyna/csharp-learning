@@ -1,12 +1,8 @@
-using System;
-using System.IO;
-using AverageInventory;
-
 namespace Commands
 {
     public class Commands
     {
-        private string[] avaiableLessons = ["AverageInventory", "USDToBRL"];
+        private readonly string[] avaiableLessons = ["AverageInventory", "USDToBRL", "CelToFah", "OutKey"];
 
         public void ListLessons()
         {
@@ -40,7 +36,13 @@ namespace Commands
                     AverageInventory.Class.Exec();
                     break;
                 case "USDToBRL":
-                    new USDToBRL.Class().Exec();
+                    //! new USDToBRL.Class().Exec();
+                    break;
+                case "CelToFah":
+                    CelToFah.Class.Exec();
+                    break;
+                case "OutKey":
+                    OutKey.Class.Exec();
                     break;
             }
         }
